@@ -14,4 +14,8 @@
 #
 
 class Event < ActiveRecord::Base
+  belongs_to :location
+
+  validates :location_id, :title, :start, :finish,
+            presence: true
 end
